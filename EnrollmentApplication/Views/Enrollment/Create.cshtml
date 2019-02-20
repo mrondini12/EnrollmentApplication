@@ -15,19 +15,61 @@
     <h4>Enrollment</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
     <div class="form-group">
-        @Html.LabelFor(model => model.StudentId, "StudentId", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.StudentId, "Student Id", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownList("StudentId", null, htmlAttributes: new { @class = "form-control" })
+            @Html.TextBoxFor(model => model.StudentId, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.StudentId, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.CourseId, "CourseId", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.Student.LastName, "Last Name", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownList("CourseId", null, htmlAttributes: new { @class = "form-control" })
+            @Html.TextBoxFor(model => model.Student.LastName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Student.LastName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Student.FirstName, "First Name", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Student.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Student.FirstName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CourseId, "Course Id", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.CourseId, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.CourseId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Course.Title, "Course Title", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Course.Title, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Course.Title, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Course.Description, "Description", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Course.Description, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Course.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Course.Credits, "Number of Credits", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.Course.Credits, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Course.Credits, "", new { @class = "text-danger" })
         </div>
     </div>
 
@@ -40,7 +82,7 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.IsActive, "Active", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.IsActive, "Is Active", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.CheckBoxFor(model => model.IsActive, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
@@ -56,9 +98,9 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.EnrollmentSemester, "Enrollment Semester", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.EnrollmentSemester, "Enrolled in Semester", htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.RadioButtonFor(model => model.EnrollmentSemester, "Spring" ) Spring
+            @Html.RadioButtonFor(model => model.EnrollmentSemester, "Spring") Spring
             @Html.RadioButtonFor(model => model.EnrollmentSemester, "Summer") Summer
             @Html.RadioButtonFor(model => model.EnrollmentSemester, "Fall") Fall
             @Html.ValidationMessageFor(model => model.EnrollmentSemester, "", new { @class = "text-danger" })

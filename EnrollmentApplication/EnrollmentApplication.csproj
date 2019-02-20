@@ -166,6 +166,10 @@
     <Compile Include="Migrations\201902172041009_AddIsActive.Designer.cs">
       <DependentUpon>201902172041009_AddIsActive.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902202323295_AddNew.cs" />
+    <Compile Include="Migrations\201902202323295_AddNew.Designer.cs">
+      <DependentUpon>201902202323295_AddNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\EnrollmentDB.cs" />
@@ -242,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902172041009_AddIsActive.resx">
       <DependentUpon>201902172041009_AddIsActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902202323295_AddNew.resx">
+      <DependentUpon>201902202323295_AddNew.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
