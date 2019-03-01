@@ -3,7 +3,7 @@ namespace EnrollmentApplication.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Reset : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,7 @@ namespace EnrollmentApplication.Migrations
                 c => new
                     {
                         CourseId = c.Int(nullable: false, identity: true),
-                        Title = c.String(),
+                        Title = c.String(nullable: false, maxLength: 150),
                         Description = c.String(),
                         Credits = c.Single(nullable: false),
                     })
@@ -25,7 +25,12 @@ namespace EnrollmentApplication.Migrations
                         EnrollmentId = c.Int(nullable: false, identity: true),
                         StudentId = c.Int(nullable: false),
                         CourseId = c.Int(nullable: false),
-                        Grade = c.String(),
+                        Grade = c.String(nullable: false),
+                        IsActive = c.Boolean(nullable: false),
+                        AssignedCampus = c.String(nullable: false),
+                        EnrollmentSemester = c.String(nullable: false),
+                        EnrollmentYear = c.Int(nullable: false),
+                        Notes = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.EnrollmentId)
                 .ForeignKey("dbo.Courses", t => t.CourseId, cascadeDelete: true)
@@ -38,8 +43,13 @@ namespace EnrollmentApplication.Migrations
                 c => new
                     {
                         StudentId = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        LastName = c.String(nullable: false, maxLength: 50),
+                        FirstName = c.String(nullable: false, maxLength: 50),
+                        Address1 = c.String(),
+                        Address2 = c.String(),
+                        City = c.String(),
+                        Zipcode = c.String(),
+                        State = c.String(),
                     })
                 .PrimaryKey(t => t.StudentId);
             

@@ -153,26 +153,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\EnrollmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902110421054_InitialCreate.cs" />
-    <Compile Include="Migrations\201902110421054_InitialCreate.Designer.cs">
-      <DependentUpon>201902110421054_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201903011722205_Reset.cs" />
+    <Compile Include="Migrations\201903011722205_Reset.Designer.cs">
+      <DependentUpon>201903011722205_Reset.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201902172041009_AddIsActive.cs" />
-    <Compile Include="Migrations\201902172041009_AddIsActive.Designer.cs">
-      <DependentUpon>201902172041009_AddIsActive.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201902202323295_AddNew.cs" />
-    <Compile Include="Migrations\201902202323295_AddNew.Designer.cs">
-      <DependentUpon>201902202323295_AddNew.cs</DependentUpon>
+    <Compile Include="Migrations\201903011932282_Reset.1.cs" />
+    <Compile Include="Migrations\201903011932282_Reset.1.Designer.cs">
+      <DependentUpon>201903011932282_Reset.1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\EnrollmentDB.cs" />
+    <Compile Include="Models\InvalidCharsAttribute.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -223,6 +222,16 @@
     <Content Include="Views\Enrollment\Details.cshtml" />
     <Content Include="Views\Enrollment\Edit.cshtml" />
     <Content Include="Views\Enrollment\Index.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Course\Create.cshtml" />
+    <Content Include="Views\Course\Delete.cshtml" />
+    <Content Include="Views\Course\Details.cshtml" />
+    <Content Include="Views\Course\Edit.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -241,14 +250,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201902110421054_InitialCreate.resx">
-      <DependentUpon>201902110421054_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903011722205_Reset.resx">
+      <DependentUpon>201903011722205_Reset.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902172041009_AddIsActive.resx">
-      <DependentUpon>201902172041009_AddIsActive.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201902202323295_AddNew.resx">
-      <DependentUpon>201902202323295_AddNew.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201903011932282_Reset.1.resx">
+      <DependentUpon>201903011932282_Reset.1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

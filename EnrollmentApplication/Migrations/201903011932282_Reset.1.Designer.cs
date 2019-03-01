@@ -7,13 +7,13 @@ namespace EnrollmentApplication.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddNew : IMigrationMetadata
+    public sealed partial class Reset1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNew));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Reset1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201902202323295_AddNew"; }
+            get { return "201903011932282_Reset.1"; }
         }
         
         string IMigrationMetadata.Source
