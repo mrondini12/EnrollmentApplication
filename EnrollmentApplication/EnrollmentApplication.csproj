@@ -168,6 +168,10 @@
     <Compile Include="Migrations\201903011932282_Reset.1.Designer.cs">
       <DependentUpon>201903011932282_Reset.1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903220243126_Update1.cs" />
+    <Compile Include="Migrations\201903220243126_Update1.Designer.cs">
+      <DependentUpon>201903220243126_Update1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\EnrollmentDB.cs" />
@@ -185,6 +189,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\Apps\CourseScript.js" />
+    <Content Include="Scripts\Apps\StudentScripts.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -196,6 +202,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -232,9 +240,13 @@
     <Content Include="Views\Course\Details.cshtml" />
     <Content Include="Views\Course\Edit.cshtml" />
     <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Student\_StudentOfWeek.cshtml" />
+    <Content Include="Views\Enrollment\StudentSearch.cshtml" />
+    <Content Include="Views\Enrollment\CourseSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -255,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903011932282_Reset.1.resx">
       <DependentUpon>201903011932282_Reset.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903220243126_Update1.resx">
+      <DependentUpon>201903220243126_Update1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

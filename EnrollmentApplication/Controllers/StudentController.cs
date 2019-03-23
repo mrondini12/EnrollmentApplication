@@ -14,6 +14,24 @@ namespace EnrollmentApplication.Controllers
     {
         private EnrollmentDB db = new EnrollmentDB();
 
+
+        public ActionResult StudentOfWeek()
+        {
+            var student = GetStudentOfWeek();
+            return PartialView("_StudentOfWeek", student);
+        
+        }
+
+        private object GetStudentOfWeek()
+        {
+            var student = db.Students
+                .OrderBy(a => System.Guid.NewGuid())
+                .First();
+
+            return student;
+        }
+
+
         // GET: Student
         public ActionResult Index()
         {
